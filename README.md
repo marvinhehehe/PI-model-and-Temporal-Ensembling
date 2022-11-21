@@ -41,7 +41,7 @@ python src/train.py --task_name ${TASK_NAME}$ \
                     --aug
 ```
 
-All the example scripts can be seen in `src/script`
+All the example scripts can be found in `src/script`
 
 ## Tips
 
