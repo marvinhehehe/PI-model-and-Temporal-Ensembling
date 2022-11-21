@@ -1,0 +1,5 @@
+transformers
+spicy
+torch
+torchvision
+datasets
