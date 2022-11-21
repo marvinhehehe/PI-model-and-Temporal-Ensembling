@@ -1,5 +1,5 @@
-transformers
-spicy
-torch
-torchvision
-datasets
+transformers==4.24.0
+spicy==0.16.0
+torch==1.12.1
+torchvision==0.13.1
+datasets==2.7.0

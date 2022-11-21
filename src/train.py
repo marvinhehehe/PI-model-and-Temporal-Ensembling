@@ -15,7 +15,8 @@ log = get_logger(__name__)
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument("--task_name", type=str, help="Name of the task.")
+    parser.add_argument("--task_name", type=str, choices=["cifar-10", "svhn", "imdb", "ag_news", "yahoo", "dbpedia"],
+                        help="Name of the task.")
     parser.add_argument("--labeled_per_class", type=int,
                         help="How many labeled data per class in the dataset. In SVHN, this parameter means total amount of labeled data")
     parser.add_argument("--seed", type=int, default=42, help="Random seed.")
@@ -28,7 +29,8 @@ def parse_args():
     parser.add_argument("--epochs", type=int, default=10, help="Total epoch.")
     parser.add_argument("--max_val", type=int, default=30,
                         help="Usually 100 in pi model and 30 in temporal ensembling.")
-    parser.add_argument("--architecture", type=str, default="pi", help="The architecture of the training process.")
+    parser.add_argument("--architecture", type=str, default="pi", choices=["pi", "temporal", "normal"],
+                        help="The architecture of the training process.")
     parser.add_argument("--alpha", type=float, default=0.6, help="hyperparameter in rampup.")
     parser.add_argument("--max_epochs", type=int, default=80, help="hyperparameter in rampup.")
     parser.add_argument("--last_epochs", type=int, default=50, help="hyperparameter in rampup.")
