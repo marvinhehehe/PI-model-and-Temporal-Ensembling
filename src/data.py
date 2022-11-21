@@ -207,7 +207,7 @@ class CVDataModule:
                 for item in unlabeled_trainset:
                     new_trainset.append((item[0], -1))
             else:
-                labeled_per_class = labeled_per_class / 10
+                labeled_per_class = labeled_per_class // 10
                 labels = np.array([item[1] for item in trainset])
                 for i in range(10):
                     idxs = np.where(labels == i)[0]
